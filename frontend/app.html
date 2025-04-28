@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Робоча сторінка додатка</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Vue 3 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand text-white" href="index.html">Телефонний Довідник</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link text-white" href="profile.html">Профіль</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="login.html">Вхід</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="app.html">Додаток</a></li>
+    </ul>
+  </header>
+
+  <main class="container mt-5" id="app">
+    <h2>Робоча сторінка додатка</h2>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Ім'я</th>
+            <th>Телефон</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
+          </tr>
+        </thead>
+        <tbody id="contact-table"></tbody>
+      </table>
+    </div>
+  
+    <div class="mt-4 contact-form mx-auto">
+      <h5 class="text-center">Додати новий контакт</h5>
+      <input v-model="name" type="text" class="form-control mt-2" placeholder="Введіть ім'я">
+      <input v-model="phone" type="text" class="form-control mt-2" placeholder="Введіть телефон (+380XXXXXXXXX)">
+      <button @click="addContact" class="btn btn-primary mt-2">Додати контакт</button>
+    </div>
+  </main>
+  
+  <footer class="bg-dark text-white text-center py-2 mt-4">
+    <p>&copy; 2025 Ваш помічник</p>
+  </footer>
+  
+  <script src="model.js"></script>
+  <script src="controller.js"></script>
+  <script src="view.js"></script>
+  <script src="main.js"></script>
+
+  </body>
+    
+
+</body>
